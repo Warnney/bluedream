@@ -1,0 +1,140 @@
+// Background Colors
+
+@background: rgb(12,15,33);
+@foreground: rgb(221,221,221);
+
+// Code Styling
+
+.CodeMirror, .CodeMirror-scroll {
+    background-color: #0A424C;
+    color: #FFEB00;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: #000E87;
+}
+
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 rgb(255,255,255);
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: #FF7500;
+        color: rgb(255,255,255);
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: rgb(255,255,255);    
+    }
+}
+
+.cm-atom {color: #3AA66B;}
+.cm-string {color: rgb(97,206,56);}
+.cm-string-2 {color: rgb(246,240,128);}
+.cm-hr {color: rgb(246,240,128);}
+.cm-number, .cm-attribute, .cm-plus {color: #00FF00;}
+.cm-def, .cm-property {color: #00FFC5;}
+.cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @foreground;}
+.cm-comment {color: rgb(174,174,174);}
+.cm-error, .cm-minus {color: rgb(220,50,47);}
+.cm-header {color: rgb(255,200,13);}
+.cm-link {color: rgb(58,217,0); text-decoration: none;}
+.cm-rangeinfo {color: rgb(108,113,196);}
+.cm-keyword {color: rgb(237,90,0);}
+.cm-qualifier {color: rgb(237,90,0);}
+.cm-builtin {color: rgb(141,166,206);}
+.cm-tag {color: rgb(141,166,206);}
+.cm-quote {color: rgb(237,90,0);}
+
+/* Extra CSS */
+
+.CodeMirror-searching {
+    background-color: rgb(211,205,105);
+    &.searching-current-match {
+        background-color: rgb(246,166,68);
+    }
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid rgb(197,200,198) !important;
+}
+
+.CodeMirror-gutters {
+    background-color: @background;
+    border-right: none;
+}
+
+.CodeMirror-linenumber {
+    color: rgb(118,118,118);
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: rgb(51,63,72);
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: rgb(0,80,160);
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+    /* Ensure visibility against gray inline editor background */
+    background-color: rgb(46,92,0);
+    color: @foreground !important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid rgb(255,255,255);
+}
+
+/*
+    CodeMirror's use of descendant selectors for certain styling causes problems when editors are
+    nested because, for items in the inner editor, the left-hand clause in the selector will now
+    match either the actual containing CodeMirror instance *OR* the outer "host" CodeMirror instance.
+
+    TODO (issue #324): We'll still have problems if editors can be nested more than one level deep,
+    or if any other descendant-selector-driven CM styles can differ between inner & outer editors
+    (potential problem areas include line wrap and coloring theme: basically, anything in codemirror.css
+    that uses a descandant selector where the CSS class name to the left of the space is something
+    other than a vanilla .CodeMirror)
+ */
+.CodeMirror {
+    .CodeMirror {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-gutters {
+        background: transparent;
+        border-right: none;
+    }
+
+    .CodeMirror .CodeMirror-activeline-background {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+        background: transparent;
+        color: rgb(118,118,118);
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline-background {
+        background: rgb(47,47,47);
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline {
+        .CodeMirror-gutter-elt {
+            background: rgba(0, 0, 0, 0.2);
+            color: rgb(255,255,255);
+        }
+    }
+}
+
+/* Non-editor styling */
+
+.image-view,
+.not-editor {
+    background-color: @background;
+}
+
+.view-pane .image-view {
+    color: @foreground;
+}
