@@ -1,0 +1,16 @@
+{
+    "name": "warnney.bluedream",
+    "title": "Blue Dream",
+    "description": "Why does everyone can dream.",
+    "homepage": "https://github.com/Warnney/bluedream",
+    "version": "1.0.0",
+    "author": "Warnney <warnneysalvatore@outlook.com>",
+    "theme": {
+        "file": "theme.less",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": [
+        "theme"
+    ]
+}
