@@ -1,5 +1,3 @@
-// Background Colors
-
 @background: rgb(12,15,33);
 @foreground: rgb(221,221,221);
 
@@ -41,9 +39,9 @@
 .cm-link {color: rgb(58,217,0); text-decoration: none;}
 .cm-rangeinfo {color: rgb(108,113,196);}
 .cm-keyword {color: rgb(237,90,0);}
-.cm-qualifier {color: rgb(237,90,0);}
-.cm-builtin {color: rgb(141,166,206);}
-.cm-tag {color: rgb(141,166,206);}
+.cm-qualifier {color: #2EFFAD;}
+.cm-builtin {color: #FF7000;}
+.cm-tag {color: #FF7000;}
 .cm-quote {color: rgb(237,90,0);}
 
 /* Extra CSS */
@@ -86,17 +84,6 @@
     border-bottom: 1px solid rgb(255,255,255);
 }
 
-/*
-    CodeMirror's use of descendant selectors for certain styling causes problems when editors are
-    nested because, for items in the inner editor, the left-hand clause in the selector will now
-    match either the actual containing CodeMirror instance *OR* the outer "host" CodeMirror instance.
-
-    TODO (issue #324): We'll still have problems if editors can be nested more than one level deep,
-    or if any other descendant-selector-driven CM styles can differ between inner & outer editors
-    (potential problem areas include line wrap and coloring theme: basically, anything in codemirror.css
-    that uses a descandant selector where the CSS class name to the left of the space is something
-    other than a vanilla .CodeMirror)
- */
 .CodeMirror {
     .CodeMirror {
         background: transparent;
