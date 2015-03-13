@@ -8,4 +8,4 @@
 <h1>Blue Dream</h1>
 <h3>Criado por mim(Warnney)</h3>
 <h4>Este tema foi criado com a simples intenção de oferecer uma variedade ainda maior de temas, a fim de atender à todos os gostos.</h4><br>
-<img src="https://www.mediafire.com/convkey/649f/jdm7ovbd7mbv08o7g.jpg" border="0" alt="Simple, Free Image and File Hosting at MediaFire" />
+<img src="https://www.mediafire.com/convkey/9571/9rr6spq0wxhkkqr7g.jpg" border="0" alt="Blue Dream Theme For Brackets"/>
